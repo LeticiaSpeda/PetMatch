@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */; };
 		E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */; };
-		E0F5942F2C308A2600F5ECCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942E2C308A2600F5ECCC /* ViewController.swift */; };
-		E0F594322C308A2700F5ECCC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0F594312C308A2700F5ECCC /* Base */; };
+		E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */; };
 		E0F594342C308A2900F5ECCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F594332C308A2900F5ECCC /* Assets.xcassets */; };
 		E0F594372C308A2900F5ECCC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0F594362C308A2900F5ECCC /* Base */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		E0F594272C308A2600F5ECCC /* PetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E0F5942E2C308A2600F5ECCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0F594312C308A2700F5ECCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E0F594332C308A2900F5ECCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0F594362C308A2900F5ECCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0F594382C308A2900F5ECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,38 @@
 		E0F594292C308A2600F5ECCC /* PetMatch */ = {
 			isa = PBXGroup;
 			children = (
-				E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */,
-				E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */,
-				E0F5942E2C308A2600F5ECCC /* ViewController.swift */,
-				E0F594302C308A2700F5ECCC /* Main.storyboard */,
-				E0F594332C308A2900F5ECCC /* Assets.xcassets */,
-				E0F594352C308A2900F5ECCC /* LaunchScreen.storyboard */,
+				E0F594402C3091D200F5ECCC /* Login */,
+				E0F5943F2C3091B700F5ECCC /* Assets */,
+				E0F5943E2C3091AA00F5ECCC /* Aplication */,
 				E0F594382C308A2900F5ECCC /* Info.plist */,
 			);
 			path = PetMatch;
+			sourceTree = "<group>";
+		};
+		E0F5943E2C3091AA00F5ECCC /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				E0F594352C308A2900F5ECCC /* LaunchScreen.storyboard */,
+				E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */,
+				E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		E0F5943F2C3091B700F5ECCC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E0F594332C308A2900F5ECCC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E0F594402C3091D200F5ECCC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +148,6 @@
 			files = (
 				E0F594342C308A2900F5ECCC /* Assets.xcassets in Resources */,
 				E0F594372C308A2900F5ECCC /* Base in Resources */,
-				E0F594322C308A2700F5ECCC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0F5942F2C308A2600F5ECCC /* ViewController.swift in Sources */,
+				E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */,
 				E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */,
 				E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E0F594302C308A2700F5ECCC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E0F594312C308A2700F5ECCC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E0F594352C308A2900F5ECCC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,9 +307,10 @@
 				DEVELOPMENT_TEAM = WXQ8GLHA2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetMatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pet Match";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,9 +320,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LeticiaSpeda.PetMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,9 +340,10 @@
 				DEVELOPMENT_TEAM = WXQ8GLHA2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetMatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pet Match";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,9 +353,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LeticiaSpeda.PetMatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
