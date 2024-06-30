@@ -12,6 +12,7 @@
 		E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */; };
 		E0F594342C308A2900F5ECCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F594332C308A2900F5ECCC /* Assets.xcassets */; };
 		E0F594372C308A2900F5ECCC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0F594362C308A2900F5ECCC /* Base */; };
+		E0F594432C30D31D00F5ECCC /* LoginViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F594422C30D31D00F5ECCC /* LoginViewImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E0F594332C308A2900F5ECCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0F594362C308A2900F5ECCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0F594382C308A2900F5ECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0F594422C30D31D00F5ECCC /* LoginViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				E0F594402C3091D200F5ECCC /* Login */,
+				E0F594412C30D2EC00F5ECCC /* Custon */,
 				E0F5943F2C3091B700F5ECCC /* Assets */,
 				E0F5943E2C3091AA00F5ECCC /* Aplication */,
 				E0F594382C308A2900F5ECCC /* Info.plist */,
@@ -86,6 +89,14 @@
 				E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E0F594412C30D2EC00F5ECCC /* Custon */ = {
+			isa = PBXGroup;
+			children = (
+				E0F594422C30D31D00F5ECCC /* LoginViewImage.swift */,
+			);
+			path = Custon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			files = (
 				E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */,
 				E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */,
+				E0F594432C30D31D00F5ECCC /* LoginViewImage.swift in Sources */,
 				E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

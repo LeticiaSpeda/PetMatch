@@ -2,10 +2,8 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    private lazy var viewImage: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.yellow.withAlphaComponent(0.1)
-        view.translatesAutoresizingMaskIntoConstraints = false
+    private lazy var viewImage: LoginViewImage = {
+        let view = LoginViewImage(frame: CGRect(x: 0, y: 0, width: 100, height: 480))  // Defina um frame inicial
         return view
     }()
     
@@ -26,10 +24,9 @@ final class LoginViewController: UIViewController {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            viewImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -100),
+            viewImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -100),  // Ajuste o valor para um positivo
             viewImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            viewImage.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            viewImage.heightAnchor.constraint(equalToConstant: 480)
+            viewImage.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     
@@ -39,18 +36,6 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        applyRoundedBottomCorners()
-    }
-    
-    private func applyRoundedBottomCorners() {
-        let cornerRadius = 122
-        let path = UIBezierPath(
-            roundedRect: viewImage.bounds,
-            byRoundingCorners: [.bottomLeft, .bottomRight],
-            cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)
-        )
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        viewImage.layer.mask = mask
+        viewImage.applyRoundedBottomCorners()  // Reaplique os cantos arredondados após o layout
     }
 }
