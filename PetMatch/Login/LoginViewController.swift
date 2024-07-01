@@ -3,9 +3,29 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     private lazy var viewImage: LoginViewImage = {
-        let view = LoginViewImage(frame: CGRect(x: 0, y: 0, width: 100, height: 480))  // Defina um frame inicial
+        let view = LoginViewImage(
+            frame: CGRect(x: 0, y: 0, width: 390, height: 480)
+        )
         return view
     }()
+    
+    private lazy var mainImage: UIImageView = {
+        let imageView = UIImageView(image: .mainPet)
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private lazy var stackVertical: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 10
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    private lazy var mainLabel = LabelCuston(title: "Bem Vindo", titleFont: .boldSystemFont(ofSize: 26), titleColor: .black, alignment: .center)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +39,21 @@ final class LoginViewController: UIViewController {
     }
     
     private func setupHierarchy() {
-        view.addSubview(viewImage)
+        view.addSubview(stackVertical)
+        
+        stackVertical.addArrangedSubview(viewImage)
+        viewImage.addSubview(mainImage)
+        stackVertical.addArrangedSubview(mainLabel)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            viewImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -100),  // Ajuste o valor para um positivo
-            viewImage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            viewImage.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            stackVertical.topAnchor.constraint(equalTo: view.topAnchor),
+            stackVertical.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            stackVertical.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            
+            mainImage.centerXAnchor.constraint(equalTo: viewImage.centerXAnchor),
+            mainImage.centerYAnchor.constraint(equalTo: viewImage.centerYAnchor, constant: 60),
         ])
     }
     
@@ -36,6 +63,6 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        viewImage.applyRoundedBottomCorners()  // Reaplique os cantos arredondados após o layout
+        viewImage.applyRoundedBottomCorners()
     }
 }

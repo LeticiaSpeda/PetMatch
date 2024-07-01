@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0ACA8E92C31C79100A598A3 /* LabelCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA8E82C31C79100A598A3 /* LabelCuston.swift */; };
 		E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */; };
 		E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */; };
 		E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0ACA8E82C31C79100A598A3 /* LabelCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCuston.swift; sourceTree = "<group>"; };
 		E0F594272C308A2600F5ECCC /* PetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E0F594422C30D31D00F5ECCC /* LoginViewImage.swift */,
+				E0ACA8E82C31C79100A598A3 /* LabelCuston.swift */,
 			);
 			path = Custon;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */,
+				E0ACA8E92C31C79100A598A3 /* LabelCuston.swift in Sources */,
 				E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */,
 				E0F594432C30D31D00F5ECCC /* LoginViewImage.swift in Sources */,
 				E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */,
