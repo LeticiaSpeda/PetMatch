@@ -12,7 +12,7 @@ final class LoginViewController: UIViewController {
     private lazy var mainImage: UIImageView = {
         let imageView = UIImageView(image: .mainPet)
         imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.enableView()
         return imageView
     }()
     
@@ -20,7 +20,7 @@ final class LoginViewController: UIViewController {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 10
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.enableView()
         return stack
     }()
     

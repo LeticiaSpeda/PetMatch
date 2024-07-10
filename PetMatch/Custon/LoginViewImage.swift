@@ -14,7 +14,7 @@ final class LoginViewImage: UIView {
     
     private func setupView() {
         backgroundColor = .yellow900.withAlphaComponent(0.1) 
-        translatesAutoresizingMaskIntoConstraints = false
+        enableView()
         heightAnchor.constraint(equalToConstant: 480).isActive = true
     }
     

@@ -22,8 +22,8 @@ final class LabelCuston: UILabel {
         text = title
         font = titleFont
         textColor = titleColor
-        translatesAutoresizingMaskIntoConstraints = false
         textAlignment = alignment
+        enableView()
     }
 }
 
