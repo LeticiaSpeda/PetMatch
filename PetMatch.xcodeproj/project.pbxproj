@@ -12,6 +12,7 @@
 		E0ACA90C2C3B13ED00A598A3 /* ImageViewCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA90B2C3B13ED00A598A3 /* ImageViewCuston.swift */; };
 		E0ACA9122C3E15EE00A598A3 /* StackViewCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA9112C3E15EE00A598A3 /* StackViewCuston.swift */; };
 		E0ACA9152C3E16E600A598A3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA9142C3E16E500A598A3 /* UIView+Extension.swift */; };
+		E0ACA9182C3E204800A598A3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA9172C3E204800A598A3 /* TabBarController.swift */; };
 		E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */; };
 		E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */; };
 		E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */; };
@@ -26,6 +27,7 @@
 		E0ACA90B2C3B13ED00A598A3 /* ImageViewCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCuston.swift; sourceTree = "<group>"; };
 		E0ACA9112C3E15EE00A598A3 /* StackViewCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewCuston.swift; sourceTree = "<group>"; };
 		E0ACA9142C3E16E500A598A3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E0ACA9172C3E204800A598A3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E0F594272C308A2600F5ECCC /* PetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E0ACA9162C3E203B00A598A3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E0ACA9172C3E204800A598A3 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		E0F5941E2C308A2600F5ECCC = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		E0F594292C308A2600F5ECCC /* PetMatch */ = {
 			isa = PBXGroup;
 			children = (
+				E0ACA9162C3E203B00A598A3 /* TabBar */,
 				E0F594402C3091D200F5ECCC /* Login */,
 				E0ACA8EA2C336F8B00A598A3 /* Home */,
 				E0F594412C30D2EC00F5ECCC /* Custon */,
@@ -203,6 +214,7 @@
 				E0ACA90C2C3B13ED00A598A3 /* ImageViewCuston.swift in Sources */,
 				E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */,
 				E0ACA8E92C31C79100A598A3 /* LabelCuston.swift in Sources */,
+				E0ACA9182C3E204800A598A3 /* TabBarController.swift in Sources */,
 				E0ACA9152C3E16E600A598A3 /* UIView+Extension.swift in Sources */,
 				E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */,
 				E0F594432C30D31D00F5ECCC /* LoginViewImage.swift in Sources */,
