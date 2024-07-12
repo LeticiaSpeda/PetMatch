@@ -16,6 +16,13 @@ final class HomeViewController: UIViewController {
     
     private lazy var addressLabel = LabelCuston(title: "Av. Dom Pedro II", titleFont: .boldSystemFont(ofSize: 14), titleColor: .black, alignment:.left )
     
+    private lazy var searchBar: UISearchBar = {
+        let search = UISearchBar()
+        search.placeholder = "search"
+        search.backgroundColor = .white
+        return search
+    }()
+    
     override func viewDidLoad() {
         commonInit()
     }
@@ -37,6 +44,8 @@ final class HomeViewController: UIViewController {
         verticalStack.addArrangedSubview(addressLabel)
         horizontalMainStack.addArrangedSubview(photoPerson)
         
+        verticalMainStack.addArrangedSubview(UIView())
+        verticalMainStack.addArrangedSubview(searchBar)
         verticalMainStack.addArrangedSubview(UIView())
     }
     

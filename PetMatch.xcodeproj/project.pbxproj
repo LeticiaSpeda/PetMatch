@@ -69,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				E0ACA9172C3E204800A598A3 /* TabBarController.swift */,
+				E0ACA8EA2C336F8B00A598A3 /* Home */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -92,9 +93,8 @@
 		E0F594292C308A2600F5ECCC /* PetMatch */ = {
 			isa = PBXGroup;
 			children = (
-				E0ACA9162C3E203B00A598A3 /* TabBar */,
 				E0F594402C3091D200F5ECCC /* Login */,
-				E0ACA8EA2C336F8B00A598A3 /* Home */,
+				E0ACA9162C3E203B00A598A3 /* TabBar */,
 				E0F594412C30D2EC00F5ECCC /* Custon */,
 				E0ACA9132C3E16CA00A598A3 /* Extensions */,
 				E0F5943F2C3091B700F5ECCC /* Assets */,
