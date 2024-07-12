@@ -21,6 +21,7 @@ final class TabBarController: UITabBarController {
     
     private func setupTabBar() {
         tabBar.tintColor = .yellow900
+        tabBar.unselectedItemTintColor = .white600.withAlphaComponent(0.5)
         tabBar.backgroundColor = .pink900
         tabBar.layer.cornerRadius = 18
     }
