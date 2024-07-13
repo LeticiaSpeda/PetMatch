@@ -16,18 +16,7 @@ final class HomeViewController: UIViewController {
     
     private lazy var addressLabel = LabelCuston(title: "Av. Dom Pedro II", titleFont: .boldSystemFont(ofSize: 14), titleColor: .black, alignment:.left )
     
-    private lazy var searchBar: UISearchBar = {
-        let search = UISearchBar()
-        search.placeholder = "Search"
-        search.sizeToFit()
-        search.layer.cornerRadius = 20
-        search.layer.masksToBounds = true
-        search.isTranslucent = false
-        search.searchTextField.backgroundColor = .white
-        search.searchTextField.tintColor = .black
-        search.backgroundImage = UIImage()
-        return search
-    }()
+    private lazy var searchBar = SearchBarCuston()
     
     override func viewDidLoad() {
         commonInit()
@@ -56,27 +45,23 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupHierarchy() {
-        NSLayoutConstraint.activate([
-            verticalMainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            verticalMainStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            verticalMainStack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            verticalMainStack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            
-            mapIcon.widthAnchor.constraint(equalToConstant: 40),
-            mapIcon.heightAnchor.constraint(equalToConstant: 40),
-            
-            photoPerson.widthAnchor.constraint(equalToConstant: 40),
-            photoPerson.heightAnchor.constraint(equalToConstant: 40),
-            
-            localLabel.heightAnchor.constraint(equalToConstant: 20),
-            addressLabel.heightAnchor.constraint(equalToConstant: 20),
-            
-            searchBar.heightAnchor.constraint(equalToConstant: 50)
-        ])
+        verticalMainStack.anchor(
+            top: view.safeAreaLayoutGuide.topAnchor,
+            leading: view.safeAreaLayoutGuide.leadingAnchor,
+            trailing: view.safeAreaLayoutGuide.trailingAnchor,
+            bottom: view.safeAreaLayoutGuide.bottomAnchor,
+            padding: UIEdgeInsets(top: 16, left: 16, bottom: -16, right: -16))
+        mapIcon.anchorSize(width: 40, height: 40)
+        photoPerson.anchorSize(width: 40, height: 40)
+        localLabel.anchorSize(height: 20)
+        addressLabel.anchorSize(height: 20)
+        searchBar.anchorSize(height: 50)
     }
     
     private func setupView() {
         view.backgroundColor = .white600
     }
-    
 }
+
+
+
