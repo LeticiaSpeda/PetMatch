@@ -18,8 +18,14 @@ final class HomeViewController: UIViewController {
     
     private lazy var searchBar: UISearchBar = {
         let search = UISearchBar()
-        search.placeholder = "search"
-        search.backgroundColor = .white
+        search.placeholder = "Search"
+        search.sizeToFit()
+        search.layer.cornerRadius = 20
+        search.layer.masksToBounds = true
+        search.isTranslucent = false
+        search.searchTextField.backgroundColor = .white
+        search.searchTextField.tintColor = .black
+        search.backgroundImage = UIImage()
         return search
     }()
     
@@ -63,7 +69,9 @@ final class HomeViewController: UIViewController {
             photoPerson.heightAnchor.constraint(equalToConstant: 40),
             
             localLabel.heightAnchor.constraint(equalToConstant: 20),
-            addressLabel.heightAnchor.constraint(equalToConstant: 20)
+            addressLabel.heightAnchor.constraint(equalToConstant: 20),
+            
+            searchBar.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
