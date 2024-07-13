@@ -14,7 +14,7 @@ extension UIView {
                 padding: UIEdgeInsets = .zero,
                 size: CGSize = .zero) {
         
-        translatesAutoresizingMaskIntoConstraints = false
+        enableView()
         
         if let top = top {
             topAnchor.constraint(equalTo: top, constant: padding.top).isActive = true
@@ -37,7 +37,7 @@ extension UIView {
     }
     
     func anchorSize(width: CGFloat? = nil, height: CGFloat? = nil) {
-        translatesAutoresizingMaskIntoConstraints = false
+        enableView()
         if let width = width {
             widthAnchor.constraint(equalToConstant: width).isActive = true
         }

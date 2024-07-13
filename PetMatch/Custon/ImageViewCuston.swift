@@ -18,6 +18,6 @@ final class ImageViewCuston: UIImageView {
         layer.cornerRadius = 20
         clipsToBounds = true
         contentMode = .scaleAspectFit
-        translatesAutoresizingMaskIntoConstraints = false
+        enableView()
     }
 }

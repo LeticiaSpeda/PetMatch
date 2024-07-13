@@ -18,6 +18,13 @@ final class HomeViewController: UIViewController {
     
     private lazy var searchBar = SearchBarCuston()
     
+    private lazy var collectionOngs: UICollectionView = {
+        let collection = UICollectionView()
+        collection.backgroundColor = .red
+        collection.enableView()
+        return collection
+    }()
+    
     override func viewDidLoad() {
         commonInit()
     }

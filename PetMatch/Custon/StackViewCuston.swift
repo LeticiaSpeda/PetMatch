@@ -19,6 +19,6 @@ final class StackViewCuston: UIStackView {
     private func setupStackView() {
         axis = orientacion
         spacing = spaceSize ?? 0
-        translatesAutoresizingMaskIntoConstraints = false
+        enableView()
     }
 }
