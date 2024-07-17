@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E099C3A42C42FD35001CD66B /* SearchBarCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099C3A32C42FD35001CD66B /* SearchBarCuston.swift */; };
+		E099C3EB2C4482AB001CD66B /* OngViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E099C3EA2C4482AB001CD66B /* OngViewCell.swift */; };
 		E0ACA8E92C31C79100A598A3 /* LabelCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA8E82C31C79100A598A3 /* LabelCuston.swift */; };
 		E0ACA8EC2C33721A00A598A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA8EB2C33721A00A598A3 /* HomeViewController.swift */; };
 		E0ACA90C2C3B13ED00A598A3 /* ImageViewCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA90B2C3B13ED00A598A3 /* ImageViewCuston.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		E099C3A32C42FD35001CD66B /* SearchBarCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCuston.swift; sourceTree = "<group>"; };
+		E099C3EA2C4482AB001CD66B /* OngViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngViewCell.swift; sourceTree = "<group>"; };
 		E0ACA8E82C31C79100A598A3 /* LabelCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCuston.swift; sourceTree = "<group>"; };
 		E0ACA8EB2C33721A00A598A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E0ACA90B2C3B13ED00A598A3 /* ImageViewCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCuston.swift; sourceTree = "<group>"; };
@@ -51,9 +53,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E099C3E92C448295001CD66B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E099C3EA2C4482AB001CD66B /* OngViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		E0ACA8EA2C336F8B00A598A3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E099C3E92C448295001CD66B /* Cell */,
 				E0ACA8EB2C33721A00A598A3 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -225,6 +236,7 @@
 				E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */,
 				E0ACA8EC2C33721A00A598A3 /* HomeViewController.swift in Sources */,
 				E099C3A42C42FD35001CD66B /* SearchBarCuston.swift in Sources */,
+				E099C3EB2C4482AB001CD66B /* OngViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

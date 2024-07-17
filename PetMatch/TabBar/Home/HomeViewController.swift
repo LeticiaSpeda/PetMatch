@@ -19,25 +19,32 @@ final class HomeViewController: UIViewController {
     private lazy var searchBar = SearchBarCuston()
     
     private lazy var collectionOngs: UICollectionView = {
-        let collection = UICollectionView()
-        collection.backgroundColor = .red
-        collection.enableView()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = .clear
+        collection.register(OngViewCell.self, forCellWithReuseIdentifier: OngViewCell.identifier)
+        collection.dataSource = self
+        collection.delegate = self
+        collection.translatesAutoresizingMaskIntoConstraints = false
         return collection
     }()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         commonInit()
     }
     
     private func commonInit() {
-        setupConstraints()
         setupHierarchy()
+        setupConstraints()
         setupView()
     }
     
-    private func setupConstraints() {
+    private func setupHierarchy() {
         view.addSubview(verticalMainStack)
-        
         verticalMainStack.addArrangedSubview(horizontalMainStack)
         
         horizontalMainStack.addArrangedSubview(mapIcon)
@@ -48,27 +55,48 @@ final class HomeViewController: UIViewController {
         
         verticalMainStack.addArrangedSubview(UIView())
         verticalMainStack.addArrangedSubview(searchBar)
-        verticalMainStack.addArrangedSubview(UIView())
+        
+        verticalMainStack.addArrangedSubview(collectionOngs)
     }
     
-    private func setupHierarchy() {
-        verticalMainStack.anchor(
-            top: view.safeAreaLayoutGuide.topAnchor,
-            leading: view.safeAreaLayoutGuide.leadingAnchor,
-            trailing: view.safeAreaLayoutGuide.trailingAnchor,
-            bottom: view.safeAreaLayoutGuide.bottomAnchor,
-            padding: UIEdgeInsets(top: 16, left: 16, bottom: -16, right: -16))
-        mapIcon.anchorSize(width: 40, height: 40)
-        photoPerson.anchorSize(width: 40, height: 40)
-        localLabel.anchorSize(height: 20)
-        addressLabel.anchorSize(height: 20)
-        searchBar.anchorSize(height: 50)
+    private func setupConstraints() {
+//        verticalMainStack.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            verticalMainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            verticalMainStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            verticalMainStack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            verticalMainStack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            
+            mapIcon.widthAnchor.constraint(equalToConstant: 40),
+            mapIcon.heightAnchor.constraint(equalToConstant: 40),
+            photoPerson.widthAnchor.constraint(equalToConstant: 40),
+            photoPerson.heightAnchor.constraint(equalToConstant: 40),
+            localLabel.heightAnchor.constraint(equalToConstant: 20),
+            addressLabel.heightAnchor.constraint(equalToConstant: 20),
+            searchBar.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
     
     private func setupView() {
-        view.backgroundColor = .white600
+        view.backgroundColor = .white
     }
 }
 
-
-
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OngViewCell.identifier, for: indexPath) as? OngViewCell else {
+            return UICollectionViewCell()
+        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width - 20, height: 100) 
+    }
+}
