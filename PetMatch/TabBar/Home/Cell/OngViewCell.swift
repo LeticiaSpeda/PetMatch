@@ -5,7 +5,7 @@ final class OngViewCell: UICollectionViewCell {
     
     private lazy var horizontalMainStack = StackViewCuston(orientacion: .horizontal, spaceSize: 10)
     
-    private lazy var photoOng = ImageViewCuston(imageHome: UIImage(systemName: "ong") ?? UIImage())
+    private lazy var photoOng = ImageViewCuston(imageHome: UIImage(named: "ong") ?? UIImage())
     
     private lazy var verticalStack = StackViewCuston(orientacion: .vertical, spaceSize: 0)
     
