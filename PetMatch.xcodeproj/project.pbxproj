@@ -15,6 +15,7 @@
 		E0ACA9122C3E15EE00A598A3 /* StackViewCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA9112C3E15EE00A598A3 /* StackViewCuston.swift */; };
 		E0ACA9152C3E16E600A598A3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA9142C3E16E500A598A3 /* UIView+Extension.swift */; };
 		E0ACA9182C3E204800A598A3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACA9172C3E204800A598A3 /* TabBarController.swift */; };
+		E0BB96832C491F08000F0B2C /* ButtonCuston.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BB96822C491F08000F0B2C /* ButtonCuston.swift */; };
 		E0F5942B2C308A2600F5ECCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */; };
 		E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */; };
 		E0F5942F2C308A2600F5ECCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5942E2C308A2600F5ECCC /* LoginViewController.swift */; };
@@ -32,6 +33,7 @@
 		E0ACA9112C3E15EE00A598A3 /* StackViewCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewCuston.swift; sourceTree = "<group>"; };
 		E0ACA9142C3E16E500A598A3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E0ACA9172C3E204800A598A3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E0BB96822C491F08000F0B2C /* ButtonCuston.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCuston.swift; sourceTree = "<group>"; };
 		E0F594272C308A2600F5ECCC /* PetMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F5942A2C308A2600F5ECCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F5942C2C308A2600F5ECCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				E0ACA90B2C3B13ED00A598A3 /* ImageViewCuston.swift */,
 				E0ACA9112C3E15EE00A598A3 /* StackViewCuston.swift */,
 				E099C3A32C42FD35001CD66B /* SearchBarCuston.swift */,
+				E0BB96822C491F08000F0B2C /* ButtonCuston.swift */,
 			);
 			path = Custon;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				E0ACA9122C3E15EE00A598A3 /* StackViewCuston.swift in Sources */,
 				E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */,
 				E0ACA8EC2C33721A00A598A3 /* HomeViewController.swift in Sources */,
+				E0BB96832C491F08000F0B2C /* ButtonCuston.swift in Sources */,
 				E099C3A42C42FD35001CD66B /* SearchBarCuston.swift in Sources */,
 				E099C3EB2C4482AB001CD66B /* OngViewCell.swift in Sources */,
 			);

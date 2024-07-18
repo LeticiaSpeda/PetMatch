@@ -9,7 +9,11 @@ final class OngViewCell: UICollectionViewCell {
     
     private lazy var verticalStack = StackViewCuston(orientacion: .vertical, spaceSize: 0)
     
-    private lazy var localLabel = LabelCuston(title: "10 km ", titleFont: .systemFont(ofSize: 12), titleColor: .gray, alignment:.left )
+    private lazy var localLabel = LabelCuston(title: "10 km ", titleFont: .systemFont(ofSize: 14), titleColor: .white600, alignment:.left )
+    
+    private lazy var availableLabel = LabelCuston(title: "Available for", titleFont: .boldSystemFont(ofSize: 16), titleColor: .white600, alignment:.left )
+    
+    private lazy var imageLike = ButtonCuston(imageButton: UIImage(systemName: "heart"), colorButton: .yellow)
     
     
     override init(frame: CGRect) {
@@ -34,21 +38,30 @@ final class OngViewCell: UICollectionViewCell {
         horizontalMainStack.addArrangedSubview(verticalStack)
         
         verticalStack.addArrangedSubview(localLabel)
+        verticalStack.addArrangedSubview(availableLabel)
+        verticalStack.addArrangedSubview(UIView())
+
+        horizontalMainStack.addArrangedSubview(imageLike)
     }
     
     private func setupHierarchy() {
         NSLayoutConstraint.activate([
-            horizontalMainStack.topAnchor.constraint(equalTo: contentView.topAnchor),
-            horizontalMainStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            horizontalMainStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            horizontalMainStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            horizontalMainStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            horizontalMainStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            horizontalMainStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            horizontalMainStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
             
             photoOng.heightAnchor.constraint(equalToConstant: 100),
-            photoOng.widthAnchor.constraint(equalToConstant: 100)
+            photoOng.widthAnchor.constraint(equalToConstant: 100),
+            
+            localLabel.topAnchor.constraint(equalTo: verticalStack.topAnchor, constant: 20),
+            
+            imageLike.heightAnchor.constraint(equalToConstant: 24)
         ])
     }
     
     private func setupView() {
         backgroundColor = .pink900
+        layer.cornerRadius = 14
     }
 }

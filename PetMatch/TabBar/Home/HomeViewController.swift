@@ -60,8 +60,6 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupConstraints() {
-//        verticalMainStack.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             
             verticalMainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -97,6 +95,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 20, height: 100) 
+        return CGSize(width: collectionView.frame.width - 20, height: 143) 
     }
 }
