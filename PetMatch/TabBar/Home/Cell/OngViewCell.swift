@@ -5,15 +5,20 @@ final class OngViewCell: UICollectionViewCell {
     
     private lazy var horizontalMainStack = StackViewCuston(orientacion: .horizontal, spaceSize: 10)
     
+    private lazy var verticalStack = StackViewCuston(orientacion: .vertical, spaceSize: 0)
+    
+    private lazy var verticalStackImages = StackViewCuston(orientacion: .vertical, spaceSize: 0)
+    
     private lazy var photoOng = ImageViewCuston(imageHome: UIImage(named: "ong") ?? UIImage())
     
-    private lazy var verticalStack = StackViewCuston(orientacion: .vertical, spaceSize: 0)
     
     private lazy var localLabel = LabelCuston(title: "10 km ", titleFont: .systemFont(ofSize: 14), titleColor: .white600, alignment:.left )
     
     private lazy var availableLabel = LabelCuston(title: "Available for", titleFont: .boldSystemFont(ofSize: 16), titleColor: .white600, alignment:.left )
     
     private lazy var imageLike = ButtonCuston(imageButton: UIImage(systemName: "heart"), colorButton: .yellow)
+    
+    private lazy var imagecat = ButtonCuston(imageButton: UIImage(systemName: "cat"), colorButton: .yellow)
     
     
     override init(frame: CGRect) {
@@ -41,7 +46,10 @@ final class OngViewCell: UICollectionViewCell {
         verticalStack.addArrangedSubview(availableLabel)
         verticalStack.addArrangedSubview(UIView())
 
-        horizontalMainStack.addArrangedSubview(imageLike)
+        horizontalMainStack.addArrangedSubview(verticalStackImages)
+        verticalStackImages.addArrangedSubview(imageLike)
+        verticalStackImages.addArrangedSubview(imagecat)
+        
     }
     
     private func setupHierarchy() {
@@ -56,7 +64,8 @@ final class OngViewCell: UICollectionViewCell {
             
             localLabel.topAnchor.constraint(equalTo: verticalStack.topAnchor, constant: 20),
             
-            imageLike.heightAnchor.constraint(equalToConstant: 24)
+            imageLike.heightAnchor.constraint(equalToConstant: 24),
+            imageLike.trailingAnchor.constraint(equalTo: horizontalMainStack.trailingAnchor, constant: -13)
         ])
     }
     

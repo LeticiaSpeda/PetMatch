@@ -6,7 +6,7 @@ final class ButtonCuston: UIButton {
     var titleButton: String?
     var corneRadiusButton: CGFloat?
     
-    init(imageButton: UIImage? = nil, titleButton: String? = nil, corneRadiusButton: CGFloat? = nil, colorButton: UIColor? ) {
+    init(imageButton: UIImage? = nil, titleButton: String? = nil, corneRadiusButton: CGFloat? = nil, colorButton: UIColor?) {
         self.imageButton = imageButton
         self.titleButton = titleButton
         self.corneRadiusButton = corneRadiusButton
