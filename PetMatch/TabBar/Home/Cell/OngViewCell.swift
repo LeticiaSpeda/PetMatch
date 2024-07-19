@@ -18,8 +18,6 @@ final class OngViewCell: UICollectionViewCell {
     
     private lazy var imageLike = ButtonCuston(imageButton: UIImage(systemName: "heart"), colorButton: .yellow)
     
-    private lazy var imagecat = ButtonCuston(imageButton: UIImage(systemName: "cat"), colorButton: .yellow)
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,9 +44,10 @@ final class OngViewCell: UICollectionViewCell {
         verticalStack.addArrangedSubview(availableLabel)
         verticalStack.addArrangedSubview(UIView())
 
+        horizontalMainStack.addArrangedSubview(UIView())
         horizontalMainStack.addArrangedSubview(verticalStackImages)
         verticalStackImages.addArrangedSubview(imageLike)
-        verticalStackImages.addArrangedSubview(imagecat)
+        verticalStackImages.addArrangedSubview(UIView())
         
     }
     
