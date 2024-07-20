@@ -11,7 +11,6 @@ final class OngViewCell: UICollectionViewCell {
     
     private lazy var photoOng = ImageViewCuston(imageHome: UIImage(named: "ong") ?? UIImage())
     
-    
     private lazy var localLabel = LabelCuston(title: "10 km ", titleFont: .systemFont(ofSize: 14), titleColor: .white600, alignment:.left )
     
     private lazy var availableLabel = LabelCuston(title: "Available for", titleFont: .boldSystemFont(ofSize: 16), titleColor: .white600, alignment:.left )
@@ -34,6 +33,22 @@ final class OngViewCell: UICollectionViewCell {
         setupHierarchy()
         setupConstraints()
         setupView()
+        setupActions()
+    }
+    
+    @objc func handleLike() {
+        if imageLike.isSelected {
+            imageLike.imageButton = UIImage(systemName: "heart.fill")
+            imageLike.backgroundColorButton = .yellow900
+        } else {
+            imageLike.imageButton = UIImage(systemName: "heart")
+            imageLike.backgroundColorButton = .yellow900
+        }
+    }
+    
+    private func setupActions() {
+        imageLike.addTarget(self, action: #selector(handleLike), for: .touchUpInside)
+        verticalStack.isUserInteractionEnabled = false
     }
     
     private func setupHierarchy() {

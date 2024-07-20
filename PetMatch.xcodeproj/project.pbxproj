@@ -66,8 +66,8 @@
 		E0ACA8EA2C336F8B00A598A3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E099C3E92C448295001CD66B /* Cell */,
 				E0ACA8EB2C33721A00A598A3 /* HomeViewController.swift */,
+				E099C3E92C448295001CD66B /* Cell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
