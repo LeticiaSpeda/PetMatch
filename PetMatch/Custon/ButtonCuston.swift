@@ -5,12 +5,14 @@ final class ButtonCuston: UIButton {
     var colorButton: UIColor?
     var titleButton: String?
     var corneRadiusButton: CGFloat?
+    var backgroundColorButton: UIColor?
     
-    init(imageButton: UIImage? = nil, titleButton: String? = nil, corneRadiusButton: CGFloat? = nil, colorButton: UIColor?) {
+    init(imageButton: UIImage? = nil, titleButton: String? = nil, corneRadiusButton: CGFloat? = nil, colorButton: UIColor?, backgroundColorButton: UIColor? = nil) {
         self.imageButton = imageButton
         self.titleButton = titleButton
         self.corneRadiusButton = corneRadiusButton
         self.colorButton = colorButton
+        self.backgroundColorButton = backgroundColorButton
         super.init(frame: .zero)
         setupButton()
     }
@@ -25,6 +27,7 @@ final class ButtonCuston: UIButton {
         setTitleColor(colorButton, for: .normal)
         tintColor = colorButton
         layer.cornerRadius = corneRadiusButton ?? 0
+        backgroundColor = backgroundColorButton
         enableView()
     }
 }

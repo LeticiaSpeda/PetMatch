@@ -18,6 +18,8 @@ final class OngViewCell: UICollectionViewCell {
     
     private lazy var imageLike = ButtonCuston(imageButton: UIImage(systemName: "heart"), colorButton: .yellow)
     
+    private lazy var moreButton = ButtonCuston(titleButton: "saiba mais", corneRadiusButton: 10, colorButton: .pink900, backgroundColorButton: .yellow)
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,6 +51,7 @@ final class OngViewCell: UICollectionViewCell {
         verticalStackImages.addArrangedSubview(imageLike)
         verticalStackImages.addArrangedSubview(UIView())
         
+        verticalStack.addArrangedSubview(moreButton)
     }
     
     private func setupHierarchy() {
@@ -63,8 +66,10 @@ final class OngViewCell: UICollectionViewCell {
             
             localLabel.topAnchor.constraint(equalTo: verticalStack.topAnchor, constant: 20),
             
-            imageLike.heightAnchor.constraint(equalToConstant: 24),
-            imageLike.trailingAnchor.constraint(equalTo: horizontalMainStack.trailingAnchor, constant: -13)
+            imageLike.widthAnchor.constraint(equalToConstant: 20),
+            imageLike.trailingAnchor.constraint(equalTo: horizontalMainStack.trailingAnchor, constant: -13),
+            moreButton.heightAnchor.constraint(equalToConstant: 30),
+            moreButton.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
     
