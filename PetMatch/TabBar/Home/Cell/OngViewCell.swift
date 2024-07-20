@@ -31,12 +31,12 @@ final class OngViewCell: UICollectionViewCell {
     }
     
     private func commonInit() {
-        setupConstraints()
         setupHierarchy()
+        setupConstraints()
         setupView()
     }
     
-    private func setupConstraints() {
+    private func setupHierarchy() {
         contentView.addSubview(horizontalMainStack)
         
         horizontalMainStack.addArrangedSubview(photoOng)
@@ -45,7 +45,7 @@ final class OngViewCell: UICollectionViewCell {
         verticalStack.addArrangedSubview(localLabel)
         verticalStack.addArrangedSubview(availableLabel)
         verticalStack.addArrangedSubview(UIView())
-
+        
         horizontalMainStack.addArrangedSubview(UIView())
         horizontalMainStack.addArrangedSubview(verticalStackImages)
         verticalStackImages.addArrangedSubview(imageLike)
@@ -54,23 +54,31 @@ final class OngViewCell: UICollectionViewCell {
         verticalStack.addArrangedSubview(moreButton)
     }
     
-    private func setupHierarchy() {
-        NSLayoutConstraint.activate([
-            horizontalMainStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
-            horizontalMainStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            horizontalMainStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            horizontalMainStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
-            
-            photoOng.heightAnchor.constraint(equalToConstant: 100),
-            photoOng.widthAnchor.constraint(equalToConstant: 100),
-            
-            localLabel.topAnchor.constraint(equalTo: verticalStack.topAnchor, constant: 20),
-            
-            imageLike.widthAnchor.constraint(equalToConstant: 20),
-            imageLike.trailingAnchor.constraint(equalTo: horizontalMainStack.trailingAnchor, constant: -13),
-            moreButton.heightAnchor.constraint(equalToConstant: 30),
-            moreButton.widthAnchor.constraint(equalToConstant: 200)
-        ])
+    private func setupConstraints() {
+        horizontalMainStack.anchor(
+            top: contentView.topAnchor,
+            leading: contentView.leadingAnchor,
+            trailing: contentView.trailingAnchor,
+            bottom: contentView.bottomAnchor,
+            padding: UIEdgeInsets(top: 20,left: 20,bottom: -20,right:-20)
+        )
+        
+        photoOng.anchorSize(height: 100)
+        photoOng.anchorSize(width: 100)
+        
+        localLabel.anchor(
+            top: verticalStack.topAnchor,
+            padding: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        )
+        
+        imageLike.anchorSize(width: 20)
+        imageLike.anchor(
+            trailing: horizontalMainStack.trailingAnchor,
+            padding: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -13)
+        )
+        
+        moreButton.anchorSize(height: 30)
+        moreButton.anchorSize(width: 200)
     }
     
     private func setupView() {
