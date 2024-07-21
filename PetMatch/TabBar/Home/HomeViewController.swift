@@ -91,10 +91,20 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OngViewCell.identifier, for: indexPath) as? OngViewCell else {
             return UICollectionViewCell()
         }
+        cell.delegate = self
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width - 20, height: 143) 
+    }
+}
+
+extension HomeViewController: OngViewCellDelegate {
+    func handleDetailsViewController() {
+        let details = DetailsViewController()
+        let navigation = UINavigationController(rootViewController: details)
+        navigation.modalPresentationStyle = .fullScreen
+        present(navigation, animated: true)
     }
 }

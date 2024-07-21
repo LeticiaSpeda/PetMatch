@@ -22,6 +22,7 @@
 		E0F594342C308A2900F5ECCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F594332C308A2900F5ECCC /* Assets.xcassets */; };
 		E0F594372C308A2900F5ECCC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E0F594362C308A2900F5ECCC /* Base */; };
 		E0F594432C30D31D00F5ECCC /* LoginViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F594422C30D31D00F5ECCC /* LoginViewImage.swift */; };
+		E0FBA4992C4D3F3F00905FB9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FBA4982C4D3F3F00905FB9 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E0F594362C308A2900F5ECCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0F594382C308A2900F5ECCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0F594422C30D31D00F5ECCC /* LoginViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewImage.swift; sourceTree = "<group>"; };
+		E0FBA4982C4D3F3F00905FB9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				E0ACA9172C3E204800A598A3 /* TabBarController.swift */,
 				E0ACA8EA2C336F8B00A598A3 /* Home */,
+				E0FBA4972C4D3F0700905FB9 /* DetailsViewController */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -156,6 +159,14 @@
 				E0BB96822C491F08000F0B2C /* ButtonCuston.swift */,
 			);
 			path = Custon;
+			sourceTree = "<group>";
+		};
+		E0FBA4972C4D3F0700905FB9 /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0FBA4982C4D3F3F00905FB9 /* DetailsViewController.swift */,
+			);
+			path = DetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 				E0F5942D2C308A2600F5ECCC /* SceneDelegate.swift in Sources */,
 				E0ACA8EC2C33721A00A598A3 /* HomeViewController.swift in Sources */,
 				E0BB96832C491F08000F0B2C /* ButtonCuston.swift in Sources */,
+				E0FBA4992C4D3F3F00905FB9 /* DetailsViewController.swift in Sources */,
 				E099C3A42C42FD35001CD66B /* SearchBarCuston.swift in Sources */,
 				E099C3EB2C4482AB001CD66B /* OngViewCell.swift in Sources */,
 			);

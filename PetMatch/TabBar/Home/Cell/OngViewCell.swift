@@ -1,7 +1,13 @@
 import UIKit
 
+protocol OngViewCellDelegate: AnyObject {
+    func handleDetailsViewController()
+}
+
 final class OngViewCell: UICollectionViewCell {
     static let identifier = String(describing: OngViewCell.self)
+    
+     weak var delegate: OngViewCellDelegate?
     
     private lazy var horizontalMainStack = StackViewCuston(orientacion: .horizontal, spaceSize: 10)
     
@@ -37,11 +43,13 @@ final class OngViewCell: UICollectionViewCell {
     }
     
     @objc func handleMore() {
-        print("ok")
+        delegate?.handleDetailsViewController()
     }
     
     private func setupActions() {
         verticalStack.isUserInteractionEnabled = true
+        horizontalMainStack.isUserInteractionEnabled = true
+        verticalStackImages.isUserInteractionEnabled = true
         moreButton.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
     }
     
