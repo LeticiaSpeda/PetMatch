@@ -36,19 +36,13 @@ final class OngViewCell: UICollectionViewCell {
         setupActions()
     }
     
-    @objc func handleLike() {
-        if imageLike.isSelected {
-            imageLike.imageButton = UIImage(systemName: "heart.fill")
-            imageLike.backgroundColorButton = .yellow900
-        } else {
-            imageLike.imageButton = UIImage(systemName: "heart")
-            imageLike.backgroundColorButton = .yellow900
-        }
+    @objc func handleMore() {
+        print("ok")
     }
     
     private func setupActions() {
-        imageLike.addTarget(self, action: #selector(handleLike), for: .touchUpInside)
-        verticalStack.isUserInteractionEnabled = false
+        verticalStack.isUserInteractionEnabled = true
+        moreButton.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
     }
     
     private func setupHierarchy() {
